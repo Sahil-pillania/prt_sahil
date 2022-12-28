@@ -1,7 +1,9 @@
 .Main-container {
   width: 100vw;
   height: 100vh;
+  margin-top: 3.5rem;
 }
+/* Home page  */
 .H {
   display: flex;
   flex-wrap: wrap;
@@ -65,4 +67,53 @@
 .H-desc {
   margin-top: 0.3rem;
   color: rgb(193, 195, 197);
+}
+
+/* Navbar page  */
+.N {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+nav {
+  height: 3.5rem;
+}
+.N-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.N-logo:hover {
+  transform: rotate(360deg);
+}
+.nav-link {
+  margin: 0 6px;
+  font-weight: 500;
+  border: 2px solid #212529;
+}
+.nav-item:hover > .nav-link {
+  /* background: aqua;
+  border-radius: 10px; */
+  /* transform: scale(0.96); */
+
+  border-bottom: 2px solid aqua;
+  border-top: 2px solid aqua;
+  /* width: 93%; */
+}
+
+@media (max-width: 991px) {
+  .nav-item .nav-link {
+    padding-left: 10px;
+    width: 78px;
+  }
+  .nav-item:hover > .nav-link {
+    border-radius: 10px;
+    background: aqua;
+  }
 }
