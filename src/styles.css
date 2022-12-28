@@ -2,6 +2,8 @@
   width: 100vw;
   height: 90.6vh;
   margin-top: 3.5rem;
+  background-color: #000;
+  color: #fff;
 }
 /* Home page  */
 .H {
@@ -148,4 +150,65 @@ nav {
 .f-auth:hover {
   letter-spacing: 0.1px;
   /* transform: rotateX(90deg); */
+}
+
+/* // About page  */
+.a {
+  display: flex;
+}
+.a-left,
+.a-right {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.techs ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.techs ul li {
+  list-style-type: none;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 1rem;
+  transition: transform 0.3s linear;
+}
+.techs ul li:hover {
+  font-weight: 500;
+  transform: scale(1.06);
+}
+
+.links {
+  /* flex: 1;
+  align-items: center;
+  justify-content: center; */
+}
+.links div {
+  transition: transform 0.5s linear;
+}
+.links div:hover {
+  transform: scale(1.02);
+}
+.links div img {
+  width: 30px;
+  margin: 5px 11px;
+}
+.links a {
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.links a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+.dwn_cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
