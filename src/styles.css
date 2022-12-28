@@ -1,6 +1,6 @@
 .Main-container {
   width: 100vw;
-  height: 100vh;
+  height: 90.6vh;
   margin-top: 3.5rem;
 }
 /* Home page  */
@@ -116,4 +116,36 @@ nav {
     border-radius: 10px;
     background: aqua;
   }
+}
+
+/* // footer page  */
+.f {
+  /* position: absolute; */
+  left: 0;
+  right: 0;
+  margin: 0;
+  /* padding: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 98vw; */
+  padding: 10px 0px;
+  overflow: hidden;
+  background: #212529;
+  color: white;
+  height: 3.5rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 0px 6px 2px;
+}
+
+.f-auth {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0px;
+  transition: all 0.9 ease-in-out;
+  user-select: none;
+}
+.f-auth:hover {
+  letter-spacing: 0.1px;
+  /* transform: rotateX(90deg); */
 }
