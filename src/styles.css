@@ -155,6 +155,7 @@ nav {
 /* // About page  */
 .a {
   display: flex;
+  flex-wrap: wrap;
 }
 .a-left,
 .a-right {
@@ -211,4 +212,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.dwn_cv a Button {
+  width: 9rem;
+  transition: width 0.3s linear;
+}
+.dwn_cv a Button:hover {
+  width: 11rem;
 }
