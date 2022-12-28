@@ -1,3 +1,68 @@
-div {
-  font-size: 88px;
+.Main-container {
+  width: 100vw;
+  height: 100vh;
+}
+.H {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+}
+.H-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.H-right {
+  flex: 1;
+  position: relative;
+}
+.H-intro {
+  font-size: 30px;
+  font-weight: 300;
+}
+.H-name {
+  font-size: 4rem;
+  color: rgb(0, 255, 217);
+  text-shadow: 2px 2px green;
+}
+.H-name:hover {
+  color: rgb(0, 242, 255);
+}
+
+.H-title {
+  min-height: 50px;
+  overflow: hidden;
+  /* background-color: red; */
+}
+.H-title-wrapper {
+  user-select: none;
+  line-height: 50px;
+  height: 50px;
+  animation: move 10s ease-in-out infinite alternate;
+}
+@keyframes move {
+  33% {
+    transform: translateY(-50px);
+  }
+  66% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(-150px);
+  }
+}
+.H-title-item {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(7, 224, 43);
+  /* background-color: purple; */
+  display: flex;
+  align-items: center;
+}
+.H-desc {
+  margin-top: 0.3rem;
+  color: rgb(193, 195, 197);
 }
