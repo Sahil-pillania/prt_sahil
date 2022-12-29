@@ -19,7 +19,7 @@ const Home = () => {
       <div className="H-left">
         <div className="content">
           <h2 data-aos="fade-right" className="H-intro">
-            Hello, My name is{" "}
+            Hello, My name is
           </h2>
           <h1 data-aos="fade-left" className="H-name">
             Sahil Pillania

@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles.css";
 import linkedIn from "../Images/linkedIn.png";
 import leetcode from "../Images/leetcode.png";
 import twitter from "../Images/twitter.png";
 import gfg from "../Images/gfg.png";
 import Button from "@mui/material/Button";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: "ease-in-sine",
+      delay: 300,
+    });
+  }, []);
   return (
     <div className="Main-container">
       <div className="m-4 text-center py-4">
@@ -49,7 +59,7 @@ const About = () => {
           </div>
         </div>
         <div className="a-right">
-          <div className="links">
+          <div className="links" data-aos="fade-left">
             <div>
               <img src={linkedIn} alt="" title="LinkedIn Id" />
               <a
@@ -96,7 +106,7 @@ const About = () => {
               </a>
             </div>
           </div>
-          <div className="download_CV my-4">
+          <div className="download_CV my-4" data-aos="zoom-in">
             <p>You can download my updated CV from below button 👇</p>
             <hr />
             <div className="dwn_cv">
