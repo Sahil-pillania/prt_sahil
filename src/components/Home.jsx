@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../styles.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import image from "../Images/home.gif";
 
 const Home = () => {
   useEffect(() => {
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
       </div>
       <div className="H-right">
-        <img src="./logo192.png" alt="" />
+        <img src={image} alt="" width={122} />
       </div>
     </div>
   );
