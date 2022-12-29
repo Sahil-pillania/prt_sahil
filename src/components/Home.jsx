@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: "ease-in-sine",
+      delay: 200,
+    });
+  }, []);
+
   return (
     <div className="Main-container H">
       <div className="H-left">
         <div className="content">
-          <h2 className="H-intro">Hello, My name is </h2>
-          <h1 className="H-name">Sahil Pillania</h1>
-          <div className="H-title">
+          <h2 data-aos="fade-right" className="H-intro">
+            Hello, My name is{" "}
+          </h2>
+          <h1 data-aos="fade-left" className="H-name">
+            Sahil Pillania
+          </h1>
+          <div className="H-title ">
             <div className="H-title-wrapper">
               <div className="H-title-item">Web Developer</div>
               <div className="H-title-item">MERN Stack Developer</div>
@@ -16,7 +32,7 @@ const Home = () => {
               <div className="H-title-item">Full Stack Developer</div>
             </div>
           </div>
-          <p className="H-desc">
+          <p className="H-desc " data-aos="fade-up">
             Software developer with a proven ablity to adapt in both
             self-starting and collaborative environments while staying focused
             on achieving high-quality results under strict deadlines.
