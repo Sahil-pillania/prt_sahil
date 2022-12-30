@@ -107,6 +107,16 @@ html a:visited {
 nav {
   height: 3.5rem;
 }
+.navbar-nav .active a.active,
+li.active a,
+.active {
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-top: 2px solid aqua;
+  border-bottom: 2px solid aqua;
+  color: rgb(246, 0, 0);
+}
+
 .N-logo {
   width: 30px;
   height: 30px;
@@ -116,6 +126,7 @@ nav {
 .N-logo:hover {
   transform: rotate(360deg);
 }
+
 .nav-link {
   margin: 0 6px;
   font-weight: 500;
@@ -125,6 +136,11 @@ nav {
   /* border: 2px solid rgb(61, 0, 0) !important; */
   border-bottom: 2px solid aqua !important;
   border-top: 2px solid aqua !important;
+}
+.nav-item:hover > .nav-link.active {
+  border: 2px solid transparent !important;
+  /* border-bottom: 2px solid transparen !important; */
+  /* border-top: 2px solid aqua !important; */
 }
 /* 
 @media (max-width: 991px) {
