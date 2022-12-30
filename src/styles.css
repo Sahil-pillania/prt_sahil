@@ -196,11 +196,28 @@ nav {
   margin: 0.5rem;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 1rem;
-  transition: transform 0.3s linear;
+  font-weight: 400;
+  /* transition: all 0.3s linear; */
 }
 .techs ul li:hover {
   font-weight: 500;
-  transform: scale(1.06);
+
+  animation: pop 1.5s linear infinite alternate;
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(0.92);
+  }
+  to {
+    /* top: 200px; */
+    background-color: blue;
+  }
 }
 
 .links {
