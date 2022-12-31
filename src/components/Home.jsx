@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="Main-container H">
+    <div className="Main-container H" name="Home">
       <div className="H-left">
         <div className="contents">
           <h2 data-aos="fade-right" className="H-intro">

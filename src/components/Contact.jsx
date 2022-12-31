@@ -24,7 +24,7 @@ const Contact = () => {
     setData({ name: "", email: "", message: "" });
   };
   return (
-    <div>
+    <div name="Contact">
       <div className="Main-container contact-page">
         <ToastContainer
           position="top-right"

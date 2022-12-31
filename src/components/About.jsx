@@ -11,14 +11,14 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 const About = () => {
   useEffect(() => {
     AOS.init({
-      offset: 200,
+      offset: 50,
       duration: 600,
       easing: "ease-in-sine",
-      delay: 300,
+      delay: 200,
     });
   }, []);
   return (
-    <div className="Main-container">
+    <div className="Main-container" name="About">
       <div className="m-4 text-center py-4">
         <h2>About Me:</h2>
       </div>

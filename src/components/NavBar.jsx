@@ -1,13 +1,39 @@
 import React from "react";
 import "../styles.css";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 import logo2 from "../Images/logo2.png";
 import { useLocation } from "react-router-dom";
+var { Link } = require("react-scroll");
 
 const NavBar = () => {
+  const style = {
+    border: "none !important",
+    borderTop: "0px solid transparent",
+    borderBottom: " 0px solid transparent",
+  };
+
+  const links = [
+    {
+      id: 1,
+      link: "Home",
+    },
+    {
+      id: 2,
+      link: "About",
+    },
+    {
+      id: 3,
+      link: "Projects",
+    },
+    {
+      id: 4,
+      link: "Contact",
+    },
+  ];
+
   const location = useLocation();
   const { pathname } = location;
-  console.log(pathname);
+  // console.log(pathname);
   const darkMode = true;
   return (
     <div className="N">
@@ -21,9 +47,9 @@ const NavBar = () => {
         // }}
       >
         <div className="container-fluid mx-4">
-          <NavLink className="navbar-brand" to="/">
+          <Link className="navbar-brand" style={style} to="/">
             <img src={logo2} alt="logo" className="N-logo" />
-          </NavLink>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -40,36 +66,51 @@ const NavBar = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className={`${pathname === "/" ? "active" : ""} nav-item`}>
-                <NavLink className="nav-link" to="/">
+              {/* <li className={`${pathname === "/" ? "active" : ""} nav-item`}>
+                <Link className="nav-link" to="/">
                   Home
-                </NavLink>
+                </Link>
               </li>
               <li
                 className={`${pathname === "/about" ? "active" : ""} nav-item`}
               >
-                <NavLink className="nav-link" to="/about">
+                <Link className="nav-link" to="/about" smooth>
                   About
-                </NavLink>
+                </Link>
               </li>
               <li
                 className={`${
                   pathname === "/projects" ? "active" : ""
                 } nav-item`}
               >
-                <NavLink className="nav-link" to="/projects">
+                <Link className="nav-link" to="/projects">
                   Projects
-                </NavLink>
+                </Link>
               </li>
               <li
                 className={`${
                   pathname === "/contact" ? "active" : ""
                 } nav-item`}
               >
-                <NavLink className="nav-link" to="/contact">
+                <Link className="nav-link" to="/contact">
                   Contact
-                </NavLink>
-              </li>
+                </Link>
+              </li> */}
+
+              {links.map(({ link, id, idx }) => {
+                return (
+                  <li
+                    key={id}
+                    className={`${
+                      pathname === { link } ? "active" : ""
+                    } nav-item`}
+                  >
+                    <Link className="nav-link" to={link}>
+                      {link}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

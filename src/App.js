@@ -7,19 +7,35 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
+  const style = {
+    margin: 0,
+    padding: 0,
+    background: "black",
+  };
+
   return (
     <>
-      <NavBar />
-      <Routes>
+      <div className={{ style }}>
+        <NavBar />
+        <ScrollTop />
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+        {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<Error />} />
-      </Routes>
+      </Routes> */}
 
-      {/* <Footer /> */}
+        <Footer />
+      </div>
     </>
   );
 }

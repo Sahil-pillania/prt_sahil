@@ -11,8 +11,8 @@ html a:visited {
 
 .Main-container {
   width: 100%;
-  height: 90.2vh;
-  margin-top: 3.5rem;
+  /* height: 90.2vh; */
+  padding-top: 3.5rem;
   background-color: #000;
   overflow-x: hidden;
   color: #fff;
@@ -108,7 +108,7 @@ html a:visited {
 nav {
   height: 3.5rem;
 }
-.navbar-nav .active a.active,
+/* .navbar-nav .active a.active,
 li.active a,
 .active {
   border-right: 2px solid transparent;
@@ -116,6 +116,9 @@ li.active a,
   border-top: 2px solid aqua;
   border-bottom: 2px solid aqua;
   color: rgb(246, 0, 0);
+} */
+.navbar-nav ul li a {
+  cursor: pointer;
 }
 
 .N-logo {
@@ -154,6 +157,85 @@ li.active a,
     
   }
 } */
+/* // scroll top  */
+.scrollBtn {
+  position: absolute;
+  /* height: 50vh; */
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  border: 2px solid black;
+  background-color: red;
+  border-radius: 50%;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-btn {
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(225, 250, 3);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+.top-btn--icon {
+  animation: gototop 1.9s linear infinite alternate-reverse;
+}
+
+@keyframes gototop {
+  0% {
+    transform: translateY(-0.3rem);
+  }
+  100% {
+    transform: translateY(0.6rem);
+  }
+}
+/* @media (max-width: 768px) {
+  .top-btn {
+    left: 40%;
+    right: 0;
+  }
+} */
+
+/* // scroll bar  */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border: 5px solid transparent;
+  height: 5px;
+  transition: all 0.5s linear;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+  border: 2px solid transparent;
+}
 
 /* // footer page  */
 .f {
@@ -219,17 +301,17 @@ li.active a,
 .techs ul li:hover {
   font-weight: 500;
 
-  animation: pop 1.5s linear infinite alternate;
+  animation: pop 2s linear infinite alternate;
 }
 @keyframes pop {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.08);
+    transform: scale(1.03);
   }
   100% {
-    transform: scale(0.92);
+    transform: scale(0.97);
   }
   to {
     /* top: 200px; */
@@ -327,6 +409,10 @@ li.active a,
 /* // Contact page  */
 .contact-page {
   padding: 2rem;
+  min-height: 90vh;
+}
+.contact-page h2 {
+  padding-top: 2rem;
 }
 .content {
   display: flex;
@@ -452,4 +538,13 @@ li.active a,
     width: 100%;
     margin-left: 0;
   }
+}
+
+/* // Projects page  */
+
+.pro_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
