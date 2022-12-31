@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div className="Main-container H">
       <div className="H-left">
-        <div className="content">
+        <div className="contents">
           <h2 data-aos="fade-right" className="H-intro">
             Hello, My name is
           </h2>
