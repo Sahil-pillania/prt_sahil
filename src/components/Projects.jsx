@@ -109,6 +109,8 @@ const Projects = () => {
                         <a
                           style={{ textDecoration: "none", color: "#fff" }}
                           href={items.link}
+                          target="_blank"
+                          rel="noreferrer"
                         >
                           {items.link}
                         </a>
