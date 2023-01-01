@@ -1,26 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const formRef = useRef();
   const [data, setData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const onSubmit = () => {
-    console.log(data.name, data.email, data.message);
-    toast.success((data.name, data.email, data.message), {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_mzihl7q",
+        "template_1tar7m7",
+        formRef.current,
+        "mQvo2URpQFZMlivd1"
+      )
+      .then(
+        (result) => {
+          toast.success("Form has been submitted successfully. 🎉", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+          setTimeout(() => {
+            toast.success("Thanks for contacting.👍 ", {
+              position: "top-center",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+          }, 500);
+        },
+        (error) => {
+          toast.error(error.text + " 😥", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+          console.log(error.text);
+        }
+      );
+    //console.log(data.name, data.email, data.message);
+
     setData({ name: "", email: "", message: "" });
   };
   return (
@@ -69,7 +110,7 @@ const Contact = () => {
               send me message from here or you contact with me through mail and
               phone also. It's my pleasure to help you.
             </p>
-            <form onSubmit={onSubmit}>
+            <form ref={formRef} onSubmit={onSubmit}>
               <div className="input-box">
                 <input
                   type="text"
@@ -90,7 +131,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setData({ ...data, [e.target.name]: e.target.value });
                   }}
-                  placeholder="Enter your email"
+                  placeholder="Enter your back response email"
                   required
                 />
               </div>
