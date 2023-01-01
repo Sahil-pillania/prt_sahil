@@ -496,7 +496,7 @@ section {
   margin-top: 12px;
 }
 .right-side .button input[type="button"] {
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 18px;
   outline: none;
   border: none;

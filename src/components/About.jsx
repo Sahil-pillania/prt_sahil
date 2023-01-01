@@ -110,7 +110,7 @@ const About = () => {
           <div className="download_CV my-4" data-aos="zoom-in">
             <p>You can download my updated CV from below button 👇</p>
             <hr />
-            <div className="dwn_cv">
+            <div className="dwn_cv" data-aos="fade-left">
               <a href={resume} download="SAHIL_CV">
                 <Button variant="contained" color="success">
                   Download CV

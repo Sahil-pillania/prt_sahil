@@ -141,7 +141,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setData({ ...data, [e.target.name]: e.target.value });
                   }}
-                  placeholder="Enter your back response email"
+                  placeholder="Enter your valid email"
                   required
                 />
               </div>
@@ -153,6 +153,7 @@ const Contact = () => {
                     setData({ ...data, [e.target.name]: e.target.value });
                   }}
                   id=""
+                  placeholder="Your message here..."
                   cols="30"
                   rows="10"
                 ></textarea>
