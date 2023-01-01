@@ -47,7 +47,7 @@ const NavBar = () => {
         // }}
       >
         <div className="container-fluid mx-4" style={{ background: "#212529" }}>
-          <Link className="navbar-brand" style={style} to="/">
+          <Link className="navbar-brand" style={style} to="/prt_sahil">
             <img src={logo2} alt="logo" className="N-logo" />
           </Link>
 
