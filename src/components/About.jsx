@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles.css";
+import resume from "../SAHIL_CV.pdf";
 import linkedIn from "../Images/linkedIn.png";
 import leetcode from "../Images/leetcode.png";
 import twitter from "../Images/twitter.png";
@@ -110,7 +111,7 @@ const About = () => {
             <p>You can download my updated CV from below button 👇</p>
             <hr />
             <div className="dwn_cv">
-              <a href="../SAHIL CV.pdf" download>
+              <a href={resume} download="SAHIL_CV">
                 <Button variant="contained" color="success">
                   Download CV
                 </Button>
