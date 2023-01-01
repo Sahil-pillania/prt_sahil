@@ -25,7 +25,7 @@ const About = () => {
 
       <div className=" a">
         <div className="a-left">
-          <div className="techs">
+          <div className="techs" data-aos="zoom-in">
             <ul>
               <li
                 style={{

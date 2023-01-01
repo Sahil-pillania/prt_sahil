@@ -1,7 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const formRef = useRef();
@@ -64,6 +66,14 @@ const Contact = () => {
 
     setData({ name: "", email: "", message: "" });
   };
+  useEffect(() => {
+    AOS.init({
+      offset: 190,
+      duration: 600,
+      easing: "ease-in-sine",
+      delay: 200,
+    });
+  }, []);
   return (
     <div name="Contact">
       <div className="Main-container contact-page">
@@ -82,7 +92,7 @@ const Contact = () => {
         {/* Same as */}
         <ToastContainer />
         <h2>Contact Me:</h2>
-        <div className="content">
+        <div className="content" data-aos="zoom-in">
           <div className="left-side">
             <div className="address details">
               <i className="fas fa-map-marker-alt"></i>

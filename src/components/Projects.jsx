@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 190,
+      duration: 600,
+      easing: "ease-in-sine",
+      delay: 200,
+    });
+  }, []);
   const projects = [
     {
       id: 1,
@@ -64,7 +74,7 @@ const Projects = () => {
         <div className="pro_name mx-auto text-center my-3">
           <h3>Projects </h3>
         </div>
-        <div className=" container ">
+        <div className=" container " data-aos="fade-right">
           <div className="table-responsive-sm table-responsive-md">
             <table className="table table-hover table-dark rounded-3">
               <caption>

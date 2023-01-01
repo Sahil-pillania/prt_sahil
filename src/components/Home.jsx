@@ -39,7 +39,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="H-right">
+      <div className="H-right" data-aos="fade-left">
         <img src={image} alt="" />
       </div>
     </div>
