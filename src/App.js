@@ -1,11 +1,11 @@
 import "./styles.css";
-import { Routes, Route } from "react-router-dom";
+//import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import Error from "./components/Error";
+//import Error from "./components/Error";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import ScrollTop from "./components/ScrollTop";

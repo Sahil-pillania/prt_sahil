@@ -542,9 +542,19 @@ section {
 
 /* // Projects page  */
 
-.pro_name {
+/* .pro_name {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80vh;
+} */
+
+/* // Responsiveness global */
+@media (max-width: 700px) {
+  .a,
+  .content,
+  .H {
+    display: flex;
+    flex-direction: column;
+  }
 }
