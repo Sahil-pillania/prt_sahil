@@ -46,25 +46,23 @@ const NavBar = () => {
         //   color: darkMode ? "white !important" : "black !important",
         // }}
       >
-        <div className="container-fluid mx-4">
+        <div className="container-fluid mx-4" style={{ background: "#212529" }}>
           <Link className="navbar-brand" style={style} to="/">
             <img src={logo2} alt="logo" className="N-logo" />
           </Link>
+
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarid"
+            aria-controls="navbarid"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse ml-auto"
-            id="navbarSupportedContent"
-          >
+          <div className="collapse navbar-collapse" id="navbarid">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {/* <li className={`${pathname === "/" ? "active" : ""} nav-item`}>
                 <Link className="nav-link" to="/">
@@ -105,7 +103,17 @@ const NavBar = () => {
                       pathname === { link } ? "active" : ""
                     } nav-item`}
                   >
-                    <Link className="nav-link" to={link}>
+                    {/* // also used navbar toggle classes here  */}
+                    <Link
+                      className="nav-link "
+                      id=""
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarid"
+                      aria-controls="navbarid"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                      to={link}
+                    >
                       {link}
                     </Link>
                   </li>

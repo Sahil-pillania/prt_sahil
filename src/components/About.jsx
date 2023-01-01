@@ -11,8 +11,8 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 const About = () => {
   useEffect(() => {
     AOS.init({
-      offset: 50,
-      duration: 600,
+      offset: 10,
+      duration: 800,
       easing: "ease-in-sine",
       delay: 200,
     });
