@@ -148,7 +148,7 @@ const Contact = () => {
               <div className="input-box message-box">
                 <textarea
                   name="message"
-                  value={data.message}
+                  value={data.message} 
                   onChange={(e) => {
                     setData({ ...data, [e.target.name]: e.target.value });
                   }}

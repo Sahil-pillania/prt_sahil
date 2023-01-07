@@ -319,11 +319,7 @@ section {
   }
 }
 
-.links {
-  /* flex: 1;
-  align-items: center;
-  justify-content: center; */
-}
+
 .links div {
   transition: transform 0.5s linear;
 }
