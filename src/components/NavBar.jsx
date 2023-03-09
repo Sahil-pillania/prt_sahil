@@ -64,37 +64,6 @@ const NavBar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarid">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              {/* <li className={`${pathname === "/" ? "active" : ""} nav-item`}>
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li
-                className={`${pathname === "/about" ? "active" : ""} nav-item`}
-              >
-                <Link className="nav-link" to="/about" smooth>
-                  About
-                </Link>
-              </li>
-              <li
-                className={`${
-                  pathname === "/projects" ? "active" : ""
-                } nav-item`}
-              >
-                <Link className="nav-link" to="/projects">
-                  Projects
-                </Link>
-              </li>
-              <li
-                className={`${
-                  pathname === "/contact" ? "active" : ""
-                } nav-item`}
-              >
-                <Link className="nav-link" to="/contact">
-                  Contact
-                </Link>
-              </li> */}
-
               {links.map(({ link, id, idx }) => {
                 return (
                   <li
