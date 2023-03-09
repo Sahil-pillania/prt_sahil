@@ -16,7 +16,7 @@ const Projects = () => {
       id: 1,
       name: "MERN login system",
       tech: "MERN Stack",
-      link: "https://sahilmernapps.herokuapp.com/",
+      link: "https://github.com/Sahil-pillania/MERN_website",
     },
     {
       id: 2,
